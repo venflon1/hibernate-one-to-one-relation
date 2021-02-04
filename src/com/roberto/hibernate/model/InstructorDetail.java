@@ -32,6 +32,10 @@ public class InstructorDetail implements Cloneable {
 		this.hobby = hobby;
 	}
 
+	public InstructorDetail() {
+		this(null, null);
+	}
+	
 	public long getIdentifier() {
 		return identifier;
 	}

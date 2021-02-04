@@ -30,6 +30,9 @@ public class App {
 		System.out.println("save instructor and relative detail");
 		trx.commit();
 		
+		Instructor instructor = dbSession.get(Instructor.class, 2L);
+		System.out.println("the instructor:" + instructor);
+		System.out.println("the instructor-detail:" + instructor.getInstructorDetail());
 		dbSession.close();
 		
 		dbSession = sessionFactory.openSession();
